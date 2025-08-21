@@ -14,14 +14,16 @@ This project aims to fine-tune open-source language models (starting with GPT-OS
 ## 📋 Implementation Plan
 
 ### Phase 1: Data Collection & Initial Processing ✅
-- [x] Set up project structure with uv
-- [x] Implement Camptocamp.org API client
-- [x] Scrape collaborative content (routes, summits, huts, articles)
-- [x] Filter for CC-BY-SA licensed content only
-- [x] Basic data cleaning and validation
-- [x] Export to JSONL format
+
+- [X] Set up project structure with uv
+- [X] Implement Camptocamp.org API client
+- [X] Scrape collaborative content (routes, summits, huts, articles)
+- [X] Filter for CC-BY-SA licensed content only
+- [X] Basic data cleaning and validation
+- [X] Export to JSONL format
 
 ### Phase 2: Dataset Creation & Prompt Engineering
+
 - [ ] Design prompt templates for various mountaineering tasks
 - [ ] Generate instruction-tuning format samples
 - [ ] Create diverse task types (summarization, Q&A, extraction, instruction generation)
@@ -29,12 +31,15 @@ This project aims to fine-tune open-source language models (starting with GPT-OS
 - [ ] Manual review of sample outputs
 
 ### Phase 3: Dataset Splitting & Validation
+
 - [ ] Split data into train/validation/test sets (80/10/10)
 - [ ] Stratified sampling by task type and content category
 - [ ] Dataset statistics and analysis
 - [ ] Create dataset cards and metadata
+- [ ] Create `DataLoader`
 
 ### Phase 4: Model Fine-tuning
+
 - [ ] Set up training infrastructure
 - [ ] Configure LoRA/QLoRA parameters
 - [ ] Implement training pipeline
@@ -42,6 +47,7 @@ This project aims to fine-tune open-source language models (starting with GPT-OS
 - [ ] Model checkpointing and evaluation
 
 ### Phase 5: Evaluation & Deployment
+
 - [ ] Evaluate on mountaineering-specific benchmarks
 - [ ] Human evaluation of outputs
 - [ ] Model optimization and iteration
@@ -51,7 +57,7 @@ This project aims to fine-tune open-source language models (starting with GPT-OS
 
 - **Python 3.13+** with uv package management
 - **Camptocamp.org Open API** for data collection
-- **Hugging Face Transformers** for model fine-tuning
+- **torch** for model fine-tuning
 - **Pydantic** for data validation
 - **aiohttp** for async API requests
 - **JSONL** format for dataset storage
@@ -60,6 +66,7 @@ This project aims to fine-tune open-source language models (starting with GPT-OS
 ## 📊 Data Sources
 
 ### Camptocamp.org API Endpoints
+
 - `/routes` - Climbing routes and approaches
 - `/summits` - Mountain peaks and summits
 - `/huts` - Mountain huts and refuges
@@ -68,6 +75,7 @@ This project aims to fine-tune open-source language models (starting with GPT-OS
 - `/climbing_sites` - Climbing areas and crags
 
 ### Content Filtering Criteria
+
 - **License**: CC-BY-SA only (collaborative content)
 - **Language**: French and English content
 - **Quality**: Well-documented routes with descriptions
@@ -116,10 +124,12 @@ mountllm/
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Python 3.13+
 - uv package manager
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone <your-repo-url>
@@ -133,7 +143,9 @@ python main.py
 ```
 
 ### Environment Variables
+
 Create a `.env` file for configuration:
+
 ```bash
 # Camptocamp API settings
 CAMPTOCAMP_API_BASE_URL=https://api.camptocamp.org
@@ -147,7 +159,7 @@ OUTPUT_DIR=./data
 
 ## 📈 Progress Tracking
 
-- [x] **Phase 1**: Basic project setup and data collection
+- [X] **Phase 1**: Basic project setup and data collection
 - [ ] **Phase 2**: Dataset creation and prompt engineering
 - [ ] **Phase 3**: Data splitting and validation
 - [ ] **Phase 4**: Model fine-tuning
@@ -156,6 +168,7 @@ OUTPUT_DIR=./data
 ## 🤝 Contributing
 
 This project follows collaborative development practices. Please ensure all contributions:
+
 - Respect Camptocamp.org's terms of service and licensing
 - Include proper attribution for data sources
 - Follow the established code style and testing practices
